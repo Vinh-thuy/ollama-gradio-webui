@@ -1,0 +1,18 @@
+[project]
+name = "ollama-gradio-webui"
+version = "0.1.0"
+description = "A user-friendly chat interface using Gradio for interacting with Ollama models"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "gradio==4.44.1",
+    "ollama==0.1.6",
+    "pydantic>=2.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

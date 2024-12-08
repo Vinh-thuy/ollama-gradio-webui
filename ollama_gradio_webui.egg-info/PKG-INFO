@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ollama-gradio-webui
+Version: 0.1.0
+Summary: A user-friendly chat interface using Gradio for interacting with Ollama models
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: gradio==4.19.2
+Requires-Dist: ollama==0.1.6
+
+<p align="left">
+    <a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish</a>
+</p>
+
+# ollama-gradio-webui
+This project provides a user-friendly chat interface using Gradio for interacting with various Ollama models.
+## How to Run
+
+* Install [Ollama](https://github.com/ollama/ollama)
+* create conda environment `conda create -n ollama python=3.12`
+* activate conda environment `conda activate ollama`
+* Install required packages `pip intall -r requirements.txt`
+* Run `python app.py`

@@ -1,0 +1,8 @@
+README.md
+app.py
+pyproject.toml
+ollama_gradio_webui.egg-info/PKG-INFO
+ollama_gradio_webui.egg-info/SOURCES.txt
+ollama_gradio_webui.egg-info/dependency_links.txt
+ollama_gradio_webui.egg-info/requires.txt
+ollama_gradio_webui.egg-info/top_level.txt
