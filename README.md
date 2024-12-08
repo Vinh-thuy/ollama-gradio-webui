@@ -372,6 +372,53 @@ nvidia-smi  # Si GPU NVIDIA disponible
    - Templates prédéfinis pour différents cas d'usage
    - Support du few-shot learning
 
+## Modèle Recommandé : llama2-vision
+
+Pour une expérience optimale avec l'interface Gradio, nous recommandons fortement l'utilisation du modèle `llama2-vision:latest` qui offre des capacités multimodales (texte + image) :
+
+1. **Installation du Modèle**
+   ```bash
+   # Téléchargement du modèle
+   ollama pull llama2-vision:latest
+   
+   # Vérification de l'installation
+   ollama list | grep vision
+   ```
+
+2. **Configuration dans l'Interface**
+   - Lancez l'application : `python app.py`
+   - Dans l'interface Gradio, sélectionnez `llama2-vision` dans le menu déroulant des modèles
+   - Le modèle supporte maintenant :
+     - Questions sur des images
+     - Analyse visuelle détaillée
+     - Génération de descriptions
+     - Détection d'objets et de texte
+
+3. **Exemples d'Utilisation**
+   ```python
+   # Via l'API
+   import requests
+   
+   response = requests.post('http://localhost:11434/api/generate',
+       json={
+           'model': 'llama2-vision',
+           'prompt': 'Que vois-tu sur cette image ?',
+           'images': ['<base64 de l'image>']
+       }
+   )
+   ```
+
+4. **Capacités du Modèle**
+   - 🖼️ Analyse d'images haute résolution
+   - 📝 Génération de descriptions détaillées
+   - 🔍 Détection d'objets et de texte
+   - 💡 Réponses contextuelles basées sur le contenu visuel
+
+5. **Performances**
+   - RAM recommandée : 16GB minimum
+   - GPU : Recommandé pour de meilleures performances
+   - Temps de réponse : 2-3 secondes par requête
+
 ## Monitoring et Debug
 
 - Logs Ollama : `/var/log/ollama/ollama.log`
